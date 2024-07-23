@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,6 +19,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+        var inputApp3=intent.getStringExtra("input")
+        Toast.makeText(this,inputApp3, Toast.LENGTH_SHORT).show()
+
         var spEx: Spinner = findViewById(R.id.spEx)
         var input: EditText = findViewById(R.id.input)
 
