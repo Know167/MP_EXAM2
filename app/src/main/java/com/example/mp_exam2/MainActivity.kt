@@ -1,6 +1,7 @@
 package com.example.mp_exam2
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -19,9 +20,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        var inputApp3=intent.getStringExtra("input")
-        Toast.makeText(this,inputApp3, Toast.LENGTH_SHORT).show()
-
+        val msg=intent.getStringExtra("input")
+        if(msg!=null)Toast.makeText(this, msg, Toast.LENGTH_LONG).show()
         var spEx: Spinner = findViewById(R.id.spEx)
         var input: EditText = findViewById(R.id.input)
 
